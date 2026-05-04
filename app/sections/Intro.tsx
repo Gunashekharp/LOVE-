@@ -20,15 +20,15 @@ export default function Intro() {
         animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
         transition={{ duration: 1.6, ease: [0.16, 1, 0.3, 1] }}
       >
-        <p className="mb-6 font-script text-4xl text-rose md:text-6xl">for the one who changed everything</p>
-        <h1 className="font-serif text-5xl leading-tight text-white drop-shadow-[0_0_35px_rgba(245,199,126,.25)] md:text-8xl">This is our story...</h1>
+        <p className="mb-6 font-script text-4xl text-rose md:text-6xl">Oiii pondatti 💖</p>
+        <h1 className="font-serif text-5xl leading-tight text-white drop-shadow-[0_0_35px_rgba(245,199,126,.25)] md:text-8xl">Happiest Birthday, My Princess</h1>
         <motion.p
           className="mx-auto mt-7 max-w-2xl text-base leading-8 text-white/68 md:text-xl"
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8, duration: 1.1 }}
         >
-          A little universe made from memories, laughter, quiet strength, and every moment that made us feel infinite.
+          This whole universe is for you pa — my panda, my wife, my best decision, my calm, my chaos, my forever.
         </motion.p>
         <motion.button
           className="mt-12 rounded-full border border-white/20 bg-white/10 px-9 py-4 text-sm uppercase tracking-[0.35em] text-ember shadow-glow backdrop-blur-2xl transition hover:border-ember/60 hover:bg-ember/10"
@@ -37,7 +37,7 @@ export default function Intro() {
           whileHover={{ scale: 1.06 }}
           whileTap={{ scale: 0.96 }}
         >
-          Begin
+          Start our story
         </motion.button>
       </motion.div>
     </section>

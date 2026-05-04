@@ -5,19 +5,19 @@ import Image from 'next/image';
 
 const cards = [
   {
-    title: 'Tiny Adventures',
+    title: 'First Smile, First Fall',
     label: '01',
-    image: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=90',
+    image: '/images/IMG_20251031_150036811.jpg',
   },
   {
-    title: 'Laughing Like Kids',
+    title: 'Our Rowdy Love',
     label: '02',
-    image: 'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=900&q=90',
+    image: '/images/IMG_20251103_153400770.jpg',
   },
   {
-    title: 'Soft Evenings',
+    title: 'Forever Means You',
     label: '03',
-    image: 'https://images.unsplash.com/photo-1499002238440-d264edd596ec?auto=format&fit=crop&w=900&q=90',
+    image: '/images/IMG_20250922_145019900.jpg',
   },
 ];
 
@@ -27,8 +27,8 @@ export default function MemoryConstellation() {
       <div className="absolute left-1/2 top-16 h-72 w-72 -translate-x-1/2 rounded-full bg-lavender/20 blur-3xl" />
       <div className="relative mx-auto max-w-6xl">
         <motion.div className="max-w-3xl" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, amount: 0.35 }} transition={{ duration: 1 }}>
-          <p className="font-script text-5xl text-rose md:text-7xl">touch the memories</p>
-          <h2 className="mt-4 font-serif text-4xl leading-tight text-white md:text-7xl">A constellation of little things I never want to lose</h2>
+          <p className="font-script text-5xl text-rose md:text-7xl">touch our memories</p>
+          <h2 className="mt-4 font-serif text-4xl leading-tight text-white md:text-7xl">Every little moment with you is priceless pa</h2>
         </motion.div>
         <div className="mt-14 grid gap-6 md:grid-cols-3">
           {cards.map((card, index) => (

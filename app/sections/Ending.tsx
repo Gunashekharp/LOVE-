@@ -26,9 +26,9 @@ export default function Ending() {
         ))}
       </div>
       <motion.div style={{ opacity, scale }}>
-        <p className="font-script text-5xl text-rose md:text-7xl">always becoming</p>
-        <h2 className="mt-6 font-serif text-5xl leading-tight text-white drop-shadow-[0_0_45px_rgba(245,199,126,.24)] md:text-8xl">And this is just the beginning...</h2>
-        <p className="mx-auto mt-8 max-w-2xl text-lg leading-9 text-white/64">Whatever comes next, may it find us kinder, closer, and still choosing the magic we found in each other.</p>
+        <p className="font-script text-5xl text-rose md:text-7xl">mine forever ♾️</p>
+        <h2 className="mt-6 font-serif text-5xl leading-tight text-white drop-shadow-[0_0_45px_rgba(245,199,126,.24)] md:text-8xl">This life, next life... always you.</h2>
+        <p className="mx-auto mt-8 max-w-2xl text-lg leading-9 text-white/64">No matter what comes, I will choose you again and again — to laugh with you, fight with you, heal with you, and grow old with you.</p>
       </motion.div>
     </section>
   );

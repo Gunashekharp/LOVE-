@@ -14,9 +14,9 @@ type ScrollSceneProps = {
 };
 
 export default function ScrollScene({
-  image = 'https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&w=1800&q=90',
-  title = 'The moment everything started',
-  description = 'At first, it was only a feeling in the dark. Then slowly, like light finding a room, you became the memory that made everything clear.',
+  image = '/images/IMG_20250911_144243949.jpg',
+  title = 'The moment my life changed',
+  description = 'It started with one hello, then one smile, then one dream. Slowly you became my peace, my madness, and the only future I want.',
 }: ScrollSceneProps) {
   const sceneRef = useRef<HTMLElement>(null);
   const visualRef = useRef<HTMLDivElement>(null);
@@ -103,7 +103,7 @@ export default function ScrollScene({
           <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-black/70 to-transparent" />
           <div className="relative z-10 flex h-full items-end px-6 pb-12 md:px-14 md:pb-16">
             <div className="max-w-3xl">
-              <p className="mb-5 font-script text-4xl text-rose md:text-6xl">from unknown to unforgettable</p>
+              <p className="mb-5 font-script text-4xl text-rose md:text-6xl">from strangers to soulmates</p>
               <h1 ref={titleRef} className="title font-serif text-4xl leading-tight text-white drop-shadow-[0_0_40px_rgba(245,199,126,.28)] md:text-7xl">
                 {title}
               </h1>
