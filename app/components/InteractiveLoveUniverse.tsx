@@ -42,7 +42,20 @@ const worlds = [
   },
 ];
 
-const notes = ['your smile', 'our silly fights', 'tight hugs', 'movie memories', 'dress day happiness', 'my forever wife'];
+const notes = ['your smile', 'our silly fights', 'tight hugs', 'movie memories', 'my forever wife', 'quiet comfort', 'that bun in the head when u tie', 'the possesive fights', 'the seducing side of u', 'the crooked teeth', 'the way u smell'];
+const noteMessages: Record<string, string> = {
+  'your smile': 'One look at your smile and my anger, stress, all sadness disappears instantly.',
+  'our silly fights': 'Even our fights make me fall for you more because we always come back with love and no ego.',
+  'tight hugs': 'When you hug me tight, the whole world disappears and I feel completely safe.',
+  'movie memories': 'Those movie days, those moments at mandi, those kisses — they live in my heart forever.',
+  'my forever wife': 'Just saying "my wife" makes me feel like the luckiest man alive.',
+  'quiet comfort': 'When we just sit together without talking, and everything feels perfect and complete.',
+  'that bun in the head when u tie': 'That hairstyle drives me crazy panda — you look so cute and pure, I just want to hold you forever.',
+  'the possesive fights': 'When you get jealous or possessive, I love it because it shows you care so much about us.',
+  'the seducing side of u': 'The way you seduce me, tease me, make me want you — nobody else can do this to me.',
+  'the crooked teeth': 'Your crooked teeth when you smile — it is imperfect, it is real, and it is absolutely beautiful to me.',
+  'the way u smell': 'Your smell, your scent — it is my peace, my home, my comfort. I could breathe you in forever.',
+};
 const sparkles = Array.from({ length: 26 }, (_, index) => ({
   left: `${6 + ((index * 17) % 88)}%`,
   top: `${8 + ((index * 23) % 84)}%`,
@@ -121,7 +134,7 @@ export default function InteractiveLoveUniverse() {
   const { setLetterOpen, setVideoOpen, openPhoto } = useExperience();
   const [activeWorld, setActiveWorld] = useState(0);
   const [energy, setEnergy] = useState(42);
-  const [selectedNote, setSelectedNote] = useState('quiet comfort');
+  const [selectedNote, setSelectedNote] = useState('the way u smell');
   const [showFinalMessage, setShowFinalMessage] = useState(true);
   const pointerX = useMotionValue(0);
   const pointerY = useMotionValue(0);
@@ -193,7 +206,10 @@ export default function InteractiveLoveUniverse() {
         <motion.div className="relative mx-auto max-w-6xl rounded-[3rem] border border-white/10 bg-white/[0.045] p-7 text-center shadow-[0_40px_180px_rgba(0,0,0,.55)] backdrop-blur-md md:p-12" style={{ rotateX, rotateY, transformPerspective: 1200 }}>
           <div className="absolute -inset-px -z-10 rounded-[3rem] bg-gradient-to-r from-cyan-300/25 via-rose/20 to-amber-200/25 blur-xl" />
           <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }} className="mx-auto mb-8 inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/10 px-5 py-3 text-sm uppercase tracking-[0.35em] text-cyan-100 shadow-[0_0_50px_rgba(34,211,238,.18)] backdrop-blur-2xl">
-            <Sparkles size={16} /> panda&apos;s birthday universe
+            <motion.div animate={{ scale: [1, 1.25, 1] }} transition={{ duration: 0.6, repeat: Infinity, ease: 'easeInOut' }}>
+              <Heart size={24} fill="currentColor" className="text-red-500" />
+            </motion.div>
+            panda&apos;s birthday universe
           </motion.div>
           <motion.h1 initial={{ opacity: 0, y: 34 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.12, duration: 1.1 }} className="font-serif text-6xl leading-none tracking-tight text-white drop-shadow-[0_0_60px_rgba(34,211,238,.22)] md:text-9xl">
             Not just wishes.
@@ -340,7 +356,8 @@ export default function InteractiveLoveUniverse() {
           <div className="grid gap-8 md:grid-cols-2 md:items-center">
             <div>
               <p className="font-script text-5xl text-rose md:text-7xl">my weak points 😚</p>
-              <h2 className="mt-4 font-serif text-4xl md:text-7xl">Things that make me fall for you more</h2>
+              <h2 className="mt-4 font-serif text-4xl md:text-7xl leading-tight">Things that make me fall for you more</h2>
+              <p className="mt-3 text-sm text-white/60 leading-relaxed">Every single one of these is a reason I love you deeper, choose you harder, and want forever with you.</p>
             </div>
             <div className="flex flex-wrap gap-3">
               {notes.map((note, index) => (
@@ -350,8 +367,9 @@ export default function InteractiveLoveUniverse() {
               ))}
             </div>
           </div>
-          <motion.div className="mt-8 rounded-[2rem] border border-white/10 bg-black/20 p-6 text-xl text-white/75" key={selectedNote} initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}>
-            Today&apos;s reason I miss you more: <span className="text-rose">{selectedNote}</span>
+          <motion.div className="mt-8 rounded-[2rem] border border-rose/30 bg-gradient-to-br from-rose/15 to-black/30 p-7 text-lg text-white/80 leading-8 shadow-[0_0_50px_rgba(244,114,182,.15)]" key={selectedNote} initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}>
+            <p className="text-xs uppercase tracking-[0.3em] text-rose/70 mb-3">today's reason i miss u coz u exist</p>
+            <p>{noteMessages[selectedNote] || `When I think about ${selectedNote}, I fall for you all over again.`}</p>
           </motion.div>
         </div>
       </section>

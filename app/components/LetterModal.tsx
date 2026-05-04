@@ -103,7 +103,7 @@ export default function LetterModal() {
                     animate={{ opacity: 1 }}
                     transition={{ delay: 1.5, duration: 0.8 }}
                   >
-                    always yours, mental ❤️
+                    always yours, Muddu ❤️
                   </motion.p>
                 </div>
               </div>
